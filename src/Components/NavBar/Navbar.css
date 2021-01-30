@@ -36,15 +36,83 @@ nav {
 .menu li:last-child a {
   font-weight: 300;
   padding: 5px 10px;
-  background-color: #ffab40;
+  background-color: #ae6d17;
   transition: all 0.5s ease-in-out;
   margin-left: 20px;
   border-radius: 2px;
 }
 
-.menu li a:hover {
-  background-color: #fff8e1;
+.menu li a:hover,
+.menu li a.active {
+  background-color: #ffe082;
   border-radius: 2px;
   color: #000;
   transition: all 0.5s ease-in-out;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+.menu-icon .fa-times {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-icon .fa-seedling {
+  transform: rotate(360deg);
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    font-size: 20px;
+  }
+  .menu li a {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    right: 0;
+    top: 64px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu li {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu li:last-child {
+    margin-bottom: 0px;
+  }
+
+  .menu li a,
+  .menu li:last-child a {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .menu.close {
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+  }
 }

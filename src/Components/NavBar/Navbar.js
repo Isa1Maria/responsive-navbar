@@ -1,21 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Navbar.css';
 import {Menu} from './Menu';
+import {NavLink} from 'react-router-dom';
 
 const Navbar = () => {
+    const [clicked, setClicked] = useState(false);
 const menu= Menu.map(({url, title}, index) => {
     return (
         <li key={index}>
-            <a href={url}>{title}</a>
+            <NavLink exact to={url} activeClassName="active">{title}</NavLink>
         </li>
     );
 });
+
+const handleClick = () => {
+    setClicked(!clicked);
+}
 return (
  <nav>
      <div className="logo">
          Agri<font>Cultura</font>
      </div>
-     <ul className="menu">{menu}</ul>
+     <div className="menu-icon" onClick={handleClick}>
+         <i className={clicked ? "fas fa-times" : "fas fa-seedling"}></i>
+         
+     </div>
+     <ul className={clicked ? "menu" : "menu close"}>{menu}</ul>
  </nav>
 );
 };
