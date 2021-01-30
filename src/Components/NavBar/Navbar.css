@@ -1,0 +1,9 @@
+nav {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 99;
+}

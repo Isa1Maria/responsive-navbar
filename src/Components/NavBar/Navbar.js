@@ -1,4 +1,5 @@
-import react from 'react';
+import React from 'react';
+import './Navbar.css';
 import {Menu} from './Menu';
 
 const Navbar = () => {
@@ -12,7 +13,7 @@ const menu= Menu.map(({url, title}, index) => {
 return (
  <nav>
      <div className="logo">
-         Van<font>Gogh</font>
+         Agri<font>Cultura</font>
      </div>
      <ul className="menu">{menu}</ul>
  </nav>
