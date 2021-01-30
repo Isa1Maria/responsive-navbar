@@ -2,7 +2,7 @@ nav {
   background: rgba(0, 0, 0, 0.6);
   padding: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   color: #ffffff;
   position: relative;
   z-index: 99;
@@ -52,13 +52,14 @@ nav {
 
 .menu-icon {
   display: none;
+  font-size: 20px;
 }
 
 .fas {
   cursor: pointer;
 }
 
-.menu-icon .fa-times {
+.menu-icon .fa-angle-down {
   transform: rotate(180deg);
   transition: all 0.2s ease-in-out;
 }

@@ -22,7 +22,7 @@ return (
          Agri<font>Cultura</font>
      </div>
      <div className="menu-icon" onClick={handleClick}>
-         <i className={clicked ? "fas fa-times" : "fas fa-seedling"}></i>
+         <i className={clicked ? "fas fa-angle-down" : "fas fa-seedling"}></i>
          
      </div>
      <ul className={clicked ? "menu" : "menu close"}>{menu}</ul>
